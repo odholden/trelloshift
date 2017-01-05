@@ -88,8 +88,8 @@ class Trelloshift {
           Trello.put("/cards/"+card.id+"/due", { value: newDate }, donePut.bind(this), failPut.bind(this))
 
           function donePut(data) {
-            $(".message").text(cards + " cards remaining");
-            if (cards === 0) return $(".message").text("Complete!");
+            $("#message").text(cards + " cards remaining");
+            if (cards === 1) return $("#message").text("Complete!");
           }
 
           function failPut(data) {
