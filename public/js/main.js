@@ -84,9 +84,10 @@ class Trelloshift {
       data.forEach((card, i) => {
         setTimeout(() => {
           cards--;
-          let newDate = this.createNewDate(card.due, advancement);
-          Trello.put("/cards/"+card.id+"/due", { value: newDate }, donePut.bind(this), failPut.bind(this))
-
+          if (card.due) {
+            let newDate = this.createNewDate(card.due, advancement);
+            Trello.put("/cards/"+card.id+"/due", { value: newDate }, donePut.bind(this), failPut.bind(this));
+          }
           function donePut(data) {
             $("#message").text(cards + " cards remaining");
             if (cards === 1) return $("#message").text("Complete!");
