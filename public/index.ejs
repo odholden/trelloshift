@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trelloshift</title>
+  <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src = "https://api.trello.com/1/client.js?key=<%= trelloKey %>"></script>
+</head>
+<body>
+  <main>
+    <%= trelloKey %>
+    <h1>Trelloshift</h1>
+    <form>
+      <label for="old-board-name">Old board name: </label>
+      <select name="old-board-name" id="old-board-name">
+      </select>
+
+      <label for="old-start-date">Old course start date: </label>
+      <input type="text" name="old-start-date" id="old-start-date">
+
+      <label for="new-board-name">New board name: </label>
+      <input type="text" name="new-board-name" id="new-board-name">
+
+      <label for="new-start-date">New course start date: </label>
+      <input type="text" name="new-start-date" id="new-start-date">
+
+      <button class="ui-button">SHIFT</button>
+    </form>
+    <p id="message"></p>
+  </main>
+
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+</html>

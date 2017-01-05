@@ -1,0 +1,17 @@
+{
+  "name": "trelloshift",
+  "version": "1.0.0",
+  "description": "A simple app to create a Sparta course calendar on a Trello board using an existing schedule",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js --use-strict",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ollie Holden",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0"
+  }
+}
